@@ -1,2 +1,30 @@
-<button type="button" (click)="googlelogin()">GOOGLE</button>
+<!-- <button type="button" (click)="googlelogin()">GOOGLE</button>
 <button type="button" (click)="facebookLogin()">FACEBOOK</button>
+ -->
+
+<div class="container">
+  <form>
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media</h2>
+
+      <div class="col">
+        <button class="google btn" (click)="googlelogin()"><i class="fa fa-google fa-fw">
+        Login with Google+</i>
+        </button>
+      </div>
+
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <button class="fb btn" (click)="facebookLogin()">
+          <i class="fa fa-facebook fa-fw"> Login with Facebook</i>
+         </button>
+
+      </div>
+
+    </div>
+  </form>
+</div>
+

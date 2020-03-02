@@ -9,13 +9,6 @@ const keys = require('./config/keys');
 const passport = require('passport');
 
 
-app.use(session({
-    cookie: {maxAge: 24*60*60*1000},
-    secret: keys.session.cookieKey,
-    resave: false,
-    saveUninitialized: false
-}));
-
 app.use(cors());
 
 mongoose.connect('mongodb+srv://Hny:2S3H9yUCgYUlaJFT@cluster0-bvc4k.mongodb.net/fluperTask?retryWrites=true', {

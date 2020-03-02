@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  postfbuser() {
+  async postfbuser() {
     if (this.userIp) {
       const newUser = {
         name: this.fBuser.name,
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
         provider: this.fBuser.provider,
         clientIp: this.userIp,
         browserName: browser.name,
-        geolocation: this.getLocation()
+        geolocation: await this.getLocation()
       };
       this.http.post('http://localhost:3000/auth/facebook', newUser)
       .subscribe((res) => {
